@@ -14,129 +14,129 @@ function setup() {
     // create a canvas that fills the browser window and attach it to your HTML
     createCanvas(windowWidth, windowHeight).parent('p5')
     // the p5 variables "width" and "height" hold the dimensions of the canvas
-// 
-// for (let i=0; i<150 ; i++){
-//
-//       let random_topfish= {x:random(0,width),
-//         y:random(0,height),
-//         // width:17.5,
-//         // height:9,
-//         vx:random(5,20),
-//         vy:random(5,30),
-//         color:[random(0,50),random(0,250),random(0,250)],
-//        }
-//
-//         topfishs.push(random_topfish)
-//       }
-//
-//
-// for (let i=0; i<7 ; i++){
-//
-//         let random_tuna= { x:random(0,width),
-//           y:random(0,height),
-//           width:17.5,
-//           height:9,
-//           vx:random(20,70) ,
-//           vy:random(10,60),
-//           color:[random(230,234),random(220,225),random(30,35)],
-//          }
-//
-//           tunas.push(random_tuna)
-//         }
-//
-// for (let i=0; i<30; i++){
-//
-//           let random_smalljelly= { x:random(0,width),
-//             y:random(0,height),
-//             width:17.5,
-//             height:9,
-//             vx:random(20,70) ,
-//             vy:random(10,60),
-//             color:[random(230,234),random(220,225),random(30,35)],
-//            }
-//
-//             smalljellys.push(random_smalljelly)
-//           }
-// for (let i=0; i<5 ; i++){
-//
-//             let random_largejelly= { x:random(0,width),
-//               y:random(0,height),
-//               width:17.5,
-//               height:9,
-//               vx:random(20,70) ,
-//               vy:random(10,60),
-//               color:[random(230,234),random(220,225),random(30,35)],
-//              }
-//
-//               largejellys.push(random_largejelly)
-//             }
-// for (let i=0; i<1 ; i++){
-//
-//               let random_shark= { x:random(0,width),
-//                 y:random(0,height),
-//                 width:17.5,
-//                 height:9,
-//                 vx:random(20,70) ,
-//                 vy:random(10,60),
-//                 color:[random(230,234),random(220,225),random(30,35)],
-//                }
-//
-//                 sharks.push(random_shark)
-//               }
-// for (let i=0; i<1 ; i++){
-//
-//                 let random_angler= { x:random(0,width),
-//                   y:random(0,height),
-//                   width:17.5,
-//                   height:9,
-//                   vx:random(20,70) ,
-//                   vy:random(10,60),
-//                   color:[random(230,234),random(220,225),random(30,35)],
-//                  }
-//
-//                   anglers.push(random_angler)
-//                 }
-// for (let i=0; i<2 ; i++){
-//
-//                   let random_worm= { x:random(0,width),
-//                     y:random(0,height),
-//                     width:17.5,
-//                     height:9,
-//                     vx:random(20,70) ,
-//                     vy:random(10,60),
-//                     color:[random(230,234),random(220,225),random(30,35)],
-//                    }
-//
-//                     worms.push(random_worm)
-//                   }
-//
-// for (let i=0; i<1 ; i++){
-//
-//                     let random_deepfish= { x:random(0,width),
-//                       y:random(0,height),
-//                       width:17.5,
-//                       height:9,
-//                       vx:random(20,70) ,
-//                       vy:random(10,60),
-//                       color:[random(230,234),random(220,225),random(30,35)],
-//                      }
-//
-//                       deepfishs.push(random_deepfish)
-//                     }
-//
-// for (let i=0; i<1 ; i++){
-//
-//                       let random_squid= { x:random(0,width),
-//                         y:random(0,height),
-//                         width:17.5,
-//                         height:9,
-//                         vx:random(20,70) ,
-//                         vy:random(10,60),
-//                         color:[random(230,234),random(220,225),random(30,35)],
-//                        }
-//
-//                         squids.push(random_squid)
-//                       }
+
+for (let i=0; i<150 ; i++){
+
+      let random_topfish= {x:random(0,width),
+        y:random(0,height),
+        // width:17.5,
+        // height:9,
+        vx:random(5,20),
+        vy:random(5,30),
+        color:[random(0,50),random(0,250),random(0,250)],
+       }
+
+        topfishs.push(random_topfish)
+      }
+
+
+for (let i=0; i<7 ; i++){
+
+        let random_tuna= { x:random(0,width),
+          y:random(0,height),
+          width:17.5,
+          height:9,
+          vx:random(20,70) ,
+          vy:random(10,60),
+          color:[random(230,234),random(220,225),random(30,35)],
+         }
+
+          tunas.push(random_tuna)
+        }
+
+for (let i=0; i<30; i++){
+
+          let random_smalljelly= { x:random(0,width),
+            y:random(0,height),
+            width:17.5,
+            height:9,
+            vx:random(20,70) ,
+            vy:random(10,60),
+            color:[random(230,234),random(220,225),random(30,35)],
+           }
+
+            smalljellys.push(random_smalljelly)
+          }
+for (let i=0; i<5 ; i++){
+
+            let random_largejelly= { x:random(0,width),
+              y:random(0,height),
+              width:17.5,
+              height:9,
+              vx:random(20,70) ,
+              vy:random(10,60),
+              color:[random(230,234),random(220,225),random(30,35)],
+             }
+
+              largejellys.push(random_largejelly)
+            }
+for (let i=0; i<1 ; i++){
+
+              let random_shark= { x:random(0,width),
+                y:random(0,height),
+                width:17.5,
+                height:9,
+                vx:random(20,70) ,
+                vy:random(10,60),
+                color:[random(230,234),random(220,225),random(30,35)],
+               }
+
+                sharks.push(random_shark)
+              }
+for (let i=0; i<1 ; i++){
+
+                let random_angler= { x:random(0,width),
+                  y:random(0,height),
+                  width:17.5,
+                  height:9,
+                  vx:random(20,70) ,
+                  vy:random(10,60),
+                  color:[random(230,234),random(220,225),random(30,35)],
+                 }
+
+                  anglers.push(random_angler)
+                }
+for (let i=0; i<2 ; i++){
+
+                  let random_worm= { x:random(0,width),
+                    y:random(0,height),
+                    width:17.5,
+                    height:9,
+                    vx:random(20,70) ,
+                    vy:random(10,60),
+                    color:[random(230,234),random(220,225),random(30,35)],
+                   }
+
+                    worms.push(random_worm)
+                  }
+
+for (let i=0; i<1 ; i++){
+
+                    let random_deepfish= { x:random(0,width),
+                      y:random(0,height),
+                      width:17.5,
+                      height:9,
+                      vx:random(20,70) ,
+                      vy:random(10,60),
+                      color:[random(230,234),random(220,225),random(30,35)],
+                     }
+
+                      deepfishs.push(random_deepfish)
+                    }
+
+for (let i=0; i<1 ; i++){
+
+                      let random_squid= { x:random(0,width),
+                        y:random(0,height),
+                        width:17.5,
+                        height:9,
+                        vx:random(20,70) ,
+                        vy:random(10,60),
+                        color:[random(230,234),random(220,225),random(30,35)],
+                       }
+
+                        squids.push(random_squid)
+                      }
 
 
 }
@@ -144,8 +144,8 @@ function setup() {
 function draw() {
 
 if(frameCount<=550){
-    let color_1 = color(133, 177, 204)      // light blue
-    let color_2 = color(5, 17, 26)      // abyss black
+    let color_1 = color(156, 213, 219 )     // light blue 133, 177, 204) 138, 189, 222)
+    let color_2 = color(3,4,5)      // abyss black 5, 17, 26
 
 
     let fade_amount = frameCount /1000
@@ -250,7 +250,7 @@ line(717,781,717,812)
 for ( let squid of squids ) {
 //big squid
 noStroke()
-fill(199, 114, 34,225)
+fill(199, 114, 34)
 quad(748,574,769,545,812,565,789,600)
 ellipse(562,576,400,80)
 strokeWeight(6)
