@@ -7,6 +7,7 @@ let squids=[]
 let anglers=[]
 let deepfishs=[]
 let worms=[]
+let bubbles=[]
 
 
 function setup() {
@@ -15,44 +16,53 @@ function setup() {
     createCanvas(windowWidth, windowHeight).parent('p5')
     // the p5 variables "width" and "height" hold the dimensions of the canvas
 
+for (let i=0; i<45 ; i++){
+
+          let random_bubble= {x:40,
+            y:80,
+            x:random(0,width),
+            y:random(0,height/3),
+            vx:random(1,3),
+            vy:random(1,3),
+            color:[0,random(100,250),random(100,250),100],
+           }
+
+            bubbles.push(random_bubble)
+          }
+
 for (let i=0; i<150 ; i++){
 
-      let random_topfish= {x:random(0,width),
-        y:random(0,height),
-        // width:17.5,
-        // height:9,
-        vx:random(5,20),
-        vy:random(5,30),
-        color:[random(0,50),random(0,250),random(0,250)],
+      let random_topfish= {x:20,
+        y:80,
+        x:random(0,width),
+        y:random(0,height/3),
+        vx:random(-1,-5),
+        vy:random(1,5),
+        color:[random(0,250),random(200,250),random(200,250)],
        }
 
         topfishs.push(random_topfish)
       }
 
-
 for (let i=0; i<7 ; i++){
 
         let random_tuna= { x:random(0,width),
-          y:random(0,height),
-          width:17.5,
-          height:9,
-          vx:random(20,70) ,
-          vy:random(10,60),
+          y:random(0,height/4),
+          vx:random(-1,-4) ,
+          vy:random(1,3),
           color:[random(230,234),random(220,225),random(30,35)],
          }
 
           tunas.push(random_tuna)
         }
 
-for (let i=0; i<30; i++){
+for (let i=0; i<15; i++){
 
           let random_smalljelly= { x:random(0,width),
             y:random(0,height),
-            width:17.5,
-            height:9,
-            vx:random(20,70) ,
-            vy:random(10,60),
-            color:[random(230,234),random(220,225),random(30,35)],
+            vx:random(0,1) ,
+            vy:random(0,6),
+            color:[random(0,250),random(0,250),random(0,250),random(100,250)],
            }
 
             smalljellys.push(random_smalljelly)
@@ -61,11 +71,9 @@ for (let i=0; i<5 ; i++){
 
             let random_largejelly= { x:random(0,width),
               y:random(0,height),
-              width:17.5,
-              height:9,
-              vx:random(20,70) ,
-              vy:random(10,60),
-              color:[random(230,234),random(220,225),random(30,35)],
+              vx:random(0,3) ,
+              vy:random(0,4),
+              color:[random(0,250),random(0,250),random(0,250),random(100,200)],
              }
 
               largejellys.push(random_largejelly)
@@ -74,11 +82,9 @@ for (let i=0; i<1 ; i++){
 
               let random_shark= { x:random(0,width),
                 y:random(0,height),
-                width:17.5,
-                height:9,
-                vx:random(20,70) ,
-                vy:random(10,60),
-                color:[random(230,234),random(220,225),random(30,35)],
+                vx:random(-1,-3) ,
+                vy:random(1,3),
+
                }
 
                 sharks.push(random_shark)
@@ -86,25 +92,21 @@ for (let i=0; i<1 ; i++){
 for (let i=0; i<1 ; i++){
 
                 let random_angler= { x:random(0,width),
-                  y:random(0,height),
-                  width:17.5,
-                  height:9,
-                  vx:random(20,70) ,
-                  vy:random(10,60),
-                  color:[random(230,234),random(220,225),random(30,35)],
+                  y:random(height-80,height/2),
+                  vx:random(.25,2) ,
+                  vy:random(.25,.5),
+
                  }
 
                   anglers.push(random_angler)
                 }
 for (let i=0; i<2 ; i++){
 
-                  let random_worm= { x:random(0,width),
-                    y:random(0,height),
-                    width:17.5,
-                    height:9,
-                    vx:random(20,70) ,
-                    vy:random(10,60),
-                    color:[random(230,234),random(220,225),random(30,35)],
+                  let random_worm= { x:0,
+                    y:(0),
+                    vx:random(.1,1),
+                    vy:random(.1,1),
+                    color:[random(0,250),random(0,225),random(0,250),random(100,150)],
                    }
 
                     worms.push(random_worm)
@@ -112,28 +114,21 @@ for (let i=0; i<2 ; i++){
 
 for (let i=0; i<1 ; i++){
 
-                    let random_deepfish= { x:random(0,width),
-                      y:random(0,height),
-                      width:17.5,
-                      height:9,
-                      vx:random(20,70) ,
-                      vy:random(10,60),
-                      color:[random(230,234),random(220,225),random(30,35)],
-                     }
-
+                    let random_deepfish=  { x:random(0,width),
+                      y:random(0,height/2),
+                      vx:random(-.25,2) ,
+                      vy:random(.25,.5),
+                    }
                       deepfishs.push(random_deepfish)
                     }
 
-for (let i=0; i<1 ; i++){
+for (let i=0; i<2 ; i++){
 
-                      let random_squid= { x:random(0,width),
-                        y:random(0,height),
-                        width:17.5,
-                        height:9,
-                        vx:random(20,70) ,
-                        vy:random(10,60),
-                        color:[random(230,234),random(220,225),random(30,35)],
-                       }
+                      let random_squid=  { x:0,
+                        y:random(0,height/2),
+                        vx:random(.5,2) ,
+                        vy:random(.25,.75)
+                      }
 
                         squids.push(random_squid)
                       }
@@ -143,252 +138,430 @@ for (let i=0; i<1 ; i++){
 
 function draw() {
 
-if(frameCount<=550){
-    let color_1 = color(156, 213, 219 )     // light blue 133, 177, 204) 138, 189, 222)
-    let color_2 = color(3,4,5)      // abyss black 5, 17, 26
+if(frameCount<=300){
+    let color_1 = color(156, 213, 219 )
+    let color_2 = color(3,4,5)
 
 
-    let fade_amount = frameCount /1000
+    let fade_amount = frameCount /1200
     let lerped_color = lerpColor(color_1, color_2, fade_amount)
 
 
     background(lerped_color)
-  }
 
-if(frameCount>580){
+    for ( let topfish of topfishs) {
+      noStroke()
+      fill(30,50,200)
+      arc(topfish.x,topfish.y,10,10,PI - HALF_PI, PI + HALF_PI ,PIE);
+      ellipse(topfish.x-13,topfish.y+1,20,10)
+      fill(0,0,0)
+      circle(topfish.x-18,topfish.y-2,5)
+      fill(270,270,270)
+      circle(topfish.x-18,topfish.y-2,2)
+      fill(99,70,108)
+      triangle(topfish.x-11,topfish.y,topfish.x-11,topfish.y,topfish.x-18,topfish.y+2);
 
-    let color_1 = color(133, 177, 204)      // light blue
-    let color_2 = color(5, 17, 26)
+      topfish.x = topfish.x + topfish.vx + random(-5, 5)
+      topfish.y = topfish.y + topfish.vy + random(-5, 5)
+          if (topfish.x>= width) {
+            topfish.vx=-topfish.vx
+          }
+          if(topfish.x<=0) {
+            topfish.vx=-topfish.vx
+          }
+          if(topfish.y>=height) {
+            topfish.vy=-topfish.vy
+          }
+          if(topfish.y<=0) {
+            topfish.vy=-topfish.vy
+          }
+        }
 
-    let fade_amount = mouseY / height
+      for ( let bubble of bubbles ) {
+          fill(bubble.color)
+          circle(bubble.x + random(-10, 10), bubble.y + random(-10, 10), random(2, 15))
+
+              }
+        }
+        for (let smalljelly of smalljellys) {
+
+        strokeWeight(1.5)
+        stroke(199, 187, 84)
+        line(smalljelly.x+15,smalljelly.y-9,smalljelly.x+24,smalljelly.y+11)
+        line(smalljelly.x+41,smalljelly.y-2,smalljelly.x+37,smalljelly.y-13)
+        line(smalljelly.x+42,smalljelly.y+2,smalljelly.x+34,smalljelly.y-14)
+        line(smalljelly.x+34,smalljelly.y-2,smalljelly.x+27,smalljelly.y-10)
+        line(smalljelly.x+33,smalljelly.y-2,smalljelly.x+22,smalljelly.y-12)
+        line(smalljelly.x+33,smalljelly.y+10,smalljelly.x+22,smalljelly.y-12)
+        line(smalljelly.x+38,smalljelly.y-15,smalljelly.x+43,smalljelly.y-2)
+        line(smalljelly.x+32,smalljelly.y-14,smalljelly.x+36,smalljelly.y)
+        line(smalljelly.x+18,smalljelly.y-11,smalljelly.x+23,smalljelly.y+1)
+        line(smalljelly.x+32,smalljelly.y+2,smalljelly.x+25,smalljelly.y-13)
+
+        noStroke()
+        fill(smalljelly.color)
+        arc(smalljelly.x+27,smalljelly.y-12,30,30,PI- QUARTER_PI,0, CHORD)
+
+        smalljelly.x = smalljelly.x + smalljelly.vx *.4
+        smalljelly.y = smalljelly.y + smalljelly.vy *.1
+            if (smalljelly.x>= width) {
+              smalljelly.vx=-smalljelly.vx
+            }
+            if(smalljelly.x<=0) {
+              smalljelly.vx=-smalljelly.vx
+            }
+            if(smalljelly.y>=height) {
+              smalljelly.vy=-smalljelly.vy
+            }
+            if(smalljelly.y<=0) {
+              smalljelly.vy=-smalljelly.vy}
+        }
+        for ( let tuna of tunas ) {
+        //     //bluefin tuna
+            strokeWeight(.5)
+            stroke(0)
+            fill(85, 119, 194)
+            ellipse(tuna.x,tuna.y,65,25)
+            triangle(tuna.x+41,tuna.y+1,tuna.x+15,tuna.y+10,tuna.x+16,tuna.y-11) //form tail
+
+            circle(tuna.x-21,tuna.y-5,6) // eye
+
+            fill(48, 76, 138)
+            triangle(tuna.x+5,tuna.y-13,tuna.x+5,tuna.y-22,tuna.x-5,tuna.y-13) //top fin
+            triangle(tuna.x+2,tuna.y+2,tuna.x-3,tuna.y-5,tuna.x+11,tuna.y+2) //side fun
+            triangle(tuna.x+3,tuna.y+12,tuna.x+6,tuna.y+19,tuna.x-4,tuna.y+11) //bottom fin
+
+            fill(121, 147, 163)
+            triangle(tuna.x+38,tuna.y-1,tuna.x+45,tuna.y-18,tuna.x+44,tuna.y-2)//tail points
+            triangle(tuna.x+44,tuna.y-2,tuna.x+49,tuna.y+27,tuna.x+38,tuna.y+1)
+
+            fill(0)
+            circle(tuna.x-22,tuna.y-5,4)//eye fill
+            fill(250,250,250,0)
+            triangle(tuna.x-32,tuna.y+2,tuna.x-29,tuna.y,tuna.x-33,tuna.y-3) // mouth
+            stroke(85, 119, 194)
+            strokeWeight(2.5)
+            line(tuna.x+15,tuna.y-9,tuna.x+15,tuna.y+9)
+            stroke(20, 47, 224)
+            strokeWeight(.75)
+            line(tuna.x-23,tuna.y+1,tuna.x+27,tuna.y)
+
+        tuna.x = tuna.x + tuna.vx
+        tuna.y = tuna.y + tuna.vy
+            if (tuna.x>= width) {
+              tuna.vx=-tuna.vx
+            }
+            if(tuna.x<=0) {
+              tuna.vx=-tuna.vx
+            }
+            if(tuna.y>=height) {
+              tuna.vy=-tuna.vy
+            }
+            if(tuna.y<=0) {
+              tuna.vy=-tuna.vy
+            }
+        }
+
+if(frameCount>300 && frameCount<600 ){
+
+    let color_1 = color(156, 213, 219 )      // light blue
+    let color_2 = color(3,4,5)
+
+    let fade_amount = frameCount /1200
     let lerped_color = lerpColor(color_1, color_2, fade_amount)
 
+
     background(lerped_color)
-  }
 
-  // if(background>)
+    for ( let largejelly of largejellys) {
 
-  for ( let topfish of topfishs) {
+    strokeWeight(2.5)
+    stroke(161, 98, 156)
+    line(largejelly.x+83,largejelly.y+33,largejelly.x+111,largejelly.y+103)
+    line(largejelly.x+78,largejelly.y+42,largejelly.x+99,largejelly.y+94)
+    line(largejelly.x+76,largejelly.y+56,largejelly.x+99,largejelly.y+111)
+    line(largejelly.x+64,largejelly.y+60,largejelly.x+78,largejelly.y+83)
+    line(largejelly.x+52,largejelly.y+58,largejelly.x+78,largejelly.y+121)
+    line(largejelly.x+43,largejelly.y+68,largejelly.x+55,largejelly.y+90)
+    line(largejelly.x+33,largejelly.y+66,largejelly.x+62,largejelly.y+117)
+    line(largejelly.x+76,largejelly.y+92,largejelly.x+58,largejelly.y+59)
+    line(largejelly.x+72,largejelly.y+54,largejelly.x+89,largejelly.y+101)
+    line(largejelly.x+51,largejelly.y+61,largejelly.x+64,largejelly.y+101)
     noStroke()
-    fill(30,50,200) // change or make random again
-    arc(111,182,10,10,PI - HALF_PI, PI + HALF_PI ,PIE);
-    ellipse(141-44,183,20,10)
-    fill(0,0,0)
-    circle(93,180,5)
-    fill(270,270,270)
-    circle(93,180,2)
-    fill(99,70,108) // change or make random again
-    triangle(93,182,100,182,97,184);
+    fill(largejelly.color) //161, 98, 156
+    arc(largejelly.x+60,largejelly.y+53,80,80, PI - QUARTER_PI,0, CHORD)
 
-//
-// topfish.x += topfish.vx * cos(.5)
-// topfish.y += topfish.vy * sin(6)
-//     if (topfish.x>= width) {
-//       topfish.vx=-topfish.vx
-//     }
-//     if(topfish.x<=0) {
-//       topfish.vx=-topfish.vx
-//     }
-//     if(topfish.y>=height) {
-//       topfish.vy=-topfish.vy
-//     }
-//     if(topfish.y<=0) {
-//       topfish.vy=-topfish.vy
+    largejelly.x = largejelly.x + largejelly.vx *.3
+    largejelly.y = largejelly.y + largejelly.vy *.1
+        if (largejelly.x>= width) {
+          largejelly.vx=-largejelly.vx
+        }
+
+        if(largejelly.y>=height) {
+          largejelly.vy=-largejelly.vy
+        }
+        if(largejelly.y<=0) {
+          largejelly.vy=-largejelly.vy}
     }
 
-for ( let tuna of tunas ) {
-    //bluefin tuna
-    strokeWeight(.5)
-    stroke(0)
-    fill(85, 119, 194)
-    ellipse(145,137,65,25)
-    triangle(186,138,160,147,161,126) //form tail
+    for (let smalljelly of smalljellys) {
 
-    circle(124,132,6) // eye
+    strokeWeight(1.5)
+    stroke(199, 187, 84)
+    line(smalljelly.x+15,smalljelly.y-9,smalljelly.x+24,smalljelly.y+11)
+    line(smalljelly.x+41,smalljelly.y-2,smalljelly.x+37,smalljelly.y-13)
+    line(smalljelly.x+42,smalljelly.y+2,smalljelly.x+34,smalljelly.y-14)
+    line(smalljelly.x+34,smalljelly.y-2,smalljelly.x+27,smalljelly.y-10)
+    line(smalljelly.x+33,smalljelly.y-2,smalljelly.x+22,smalljelly.y-12)
+    line(smalljelly.x+33,smalljelly.y+10,smalljelly.x+22,smalljelly.y-12)
+    line(smalljelly.x+38,smalljelly.y-15,smalljelly.x+43,smalljelly.y-2)
+    line(smalljelly.x+32,smalljelly.y-14,smalljelly.x+36,smalljelly.y)
+    line(smalljelly.x+18,smalljelly.y-11,smalljelly.x+23,smalljelly.y+1)
+    line(smalljelly.x+32,smalljelly.y+2,smalljelly.x+25,smalljelly.y-13)
 
-    fill(48, 76, 138)
-    triangle(150,124,150,115,140,124) //top fin
-    triangle(147,139,142,142,134,139) //side fun
-    triangle(148,149,151,156,141,148) //bottom fin
+    noStroke()
+    fill(smalljelly.color) //199, 187, 84
+    arc(smalljelly.x+27,smalljelly.y-12,30,30,PI- QUARTER_PI,0, CHORD)
 
-    fill(121, 147, 163)
-    triangle(183,136,190,119,189,135)//tail points
-    triangle(189,135,194,154,183,138)
+    smalljelly.x = smalljelly.x + smalljelly.vx *.4
+    smalljelly.y = smalljelly.y + smalljelly.vy *.1
+        if (smalljelly.x>= width) {
+          smalljelly.vx=-smalljelly.vx
+        }
+        if(smalljelly.x<=0) {
+          smalljelly.vx=-smalljelly.vx
+        }
+        if(smalljelly.y>=height) {
+          smalljelly.vy=-smalljelly.vy
+        }
+        if(smalljelly.y<=0) {
+          smalljelly.vy=-smalljelly.vy}
+    }
 
-    fill(0)
-    circle(123,132,4)//eye fill
-    fill(250,250,250,0)
-    triangle(113,139,116,137,112,134) // mouth - find a way to make this transparent
-    stroke(85, 119, 194)
-    strokeWeight(2.5)
-    line(160,128,160,146)
-    stroke(20, 47, 224)
-    strokeWeight(.75)
-    line(122,138,172,137)
+    for ( let tuna of tunas ) {
+    //     //bluefin tuna
+        strokeWeight(.5)
+        stroke(0)
+        fill(85, 119, 194)
+        ellipse(tuna.x,tuna.y,65,25)
+        triangle(tuna.x+41,tuna.y+1,tuna.x+15,tuna.y+10,tuna.x+16,tuna.y-11) //form tail
+
+        circle(tuna.x-21,tuna.y-5,6) // eye
+
+        fill(48, 76, 138)
+        triangle(tuna.x+5,tuna.y-13,tuna.x+5,tuna.y-22,tuna.x-5,tuna.y-13) //top fin
+        triangle(tuna.x+2,tuna.y+2,tuna.x-3,tuna.y-5,tuna.x+11,tuna.y+2) //side fun
+        triangle(tuna.x+3,tuna.y+12,tuna.x+6,tuna.y+19,tuna.x-4,tuna.y+11) //bottom fin
+
+        fill(121, 147, 163)
+        triangle(tuna.x+38,tuna.y-1,tuna.x+45,tuna.y-18,tuna.x+44,tuna.y-2)//tail points
+        triangle(tuna.x+44,tuna.y-2,tuna.x+49,tuna.y+27,tuna.x+38,tuna.y+1)
+
+        fill(0)
+        circle(tuna.x-22,tuna.y-5,4)//eye fill
+        fill(250,250,250,0)
+        triangle(tuna.x-32,tuna.y+2,tuna.x-29,tuna.y,tuna.x-33,tuna.y-3) // mouth
+        stroke(85, 119, 194)
+        strokeWeight(2.5)
+        line(tuna.x+15,tuna.y-9,tuna.x+15,tuna.y+9)
+        stroke(20, 47, 224)
+        strokeWeight(.75)
+        line(tuna.x-23,tuna.y+1,tuna.x+27,tuna.y)
+
+    tuna.x = tuna.x + tuna.vx
+    tuna.y = tuna.y + tuna.vy
+        if (tuna.x>= width) {
+          tuna.vx=-tuna.vx
+        }
+        if(tuna.x<=0) {
+          tuna.vx=-tuna.vx
+        }
+        if(tuna.y>=height) {
+          tuna.vy=-tuna.vy
+        }
+        if(tuna.y<=0) {
+          tuna.vy=-tuna.vy
+        }
+    }
 }
 
+if(frameCount>=600 && frameCount<900 ){
+
+      let color_1 = color(156, 213, 219 )      // light blue
+      let color_2 = color(3,4,5)
+
+      let fade_amount = frameCount /1200
+      let lerped_color = lerpColor(color_1, color_2, fade_amount)
+      // let fade_amount = mouseY / height //use this to control animals by depth
+      // let lerped_color = lerpColor(color_1, color_2, fade_amount)
+
+      background(lerped_color)
+
+      for ( let shark of sharks) {
+      //goblin shark
+      noStroke()
+      fill(79, 107, 125) //40, 86, 115
+      ellipse(shark.x+55,shark.y+31,215,40)
+      ellipse(shark.x+59,shark.y+36,150,30)
+      quad(shark.x+33,shark.y+8,shark.x+94,shark.y-18,shark.x+108,shark.y+17,shark.x+70,shark.y+24)
+      quad(shark.x+33,shark.y+8,shark.x-129,shark.y+10,shark.x-40,shark.y+21,shark.x+115,shark.y+35)
+      quad(shark.x+35,shark.y+8,shark.x+170,shark.y+12,shark.x+229,shark.y+35,shark.x+42,shark.y+26)
+      quad(shark.x-81,shark.y+14,shark.x-81,shark.y+24,shark.x-48,shark.y+36,shark.x+230,shark.y+58)
+      quad(shark.x-48,shark.y+34,shark.x-79,shark.y+42,shark.x+79,shark.y+50,shark.x-10,shark.y+54) //+79 might be -
+      quad(shark.x-14,shark.y+51,shark.x+256,shark.y+57,shark.x+253,shark.y+38,shark.x+167,shark.y+12)
+      quad(shark.x-29,shark.y+52,shark.x+48,shark.y+51,shark.x+41,shark.y+39,shark.x-42,shark.y+36)
+      quad(shark.x+244,shark.y+37,shark.x+312,shark.y-26,shark.x+321,shark.y-25,shark.x+274,shark.y+57)
+      quad(shark.x+287,shark.y+23,shark.x+290,shark.y+72,shark.x+267,shark.y+74,shark.x+248,shark.y+50)
+      quad(shark.x+190,shark.y+47,shark.x+194,shark.y+67,shark.x+219,shark.y+70,shark.x+220,shark.y+47)
+      quad(shark.x+115,shark.y+48,shark.x+122,shark.y+66,shark.x+153,shark.y+69,shark.x+158,shark.y+42) //middle fin
+      quad(shark.x-19,shark.y+49,shark.x-4,shark.y+64,shark.x+39,shark.y+60,shark.x+39,shark.y+42)
+      quad(shark.x+165,shark.y+13,shark.x+180,shark.y-5,shark.x+200,shark.y+8,shark.x+200,shark.y+27) // top
+      triangle(shark.x-4,shark.y+62,shark.x+19,shark.y+70,shark.x+38,shark.y+58)
+      fill(0)
+      ellipse(shark.x-62,shark.y+15,6,4)
+      stroke(0)
+      strokeWeight(3)
+      line(shark.x-33,shark.y+21,shark.x-29,shark.y+42)
+      line(shark.x-16,shark.y+23,shark.x-15,shark.y+41)
+      line(shark.x-26,shark.y+20,shark.x-22,shark.y+42)
+
+      shark.x = shark.x + shark.vx *.2
+      shark.y = shark.y + shark.vy *.1
+}
 for ( let worm of worms){
 //worm time ! try lerp color on it or make it change color somehow
-fill(250)
-ellipse(700,800,70,20)
-stroke(250)
+fill(worm.color)
+ellipse(worm.x+100,worm.y,70,20)
+stroke(worm.color)
 strokeWeight(2)
-line(667,798,649,792)
-line(667,798,649,806)
-line(673,782,673,818)
-line(679,783,679,815)
-line(685,784,685,815)
-line(691,783,691,817)
-line(698,784,698,817)
-line(705,783,705,815)
-line(712,784,712,816)
-line(722,783,722,812)
-line(727,784,727,810)
-line(717,781,717,812)
-}
+line(worm.x+67,worm.y-2,worm.x+49,worm.y+8)
+line(worm.x+67,worm.y-2,worm.x+49,worm.y-8)
+line(worm.x+73,worm.y-20,worm.x+73,worm.y+20)
+line(worm.x+79,worm.y-20,worm.x+79,worm.y+20)
+line(worm.x+85,worm.y-20,worm.x+85,worm.y+20)
+line(worm.x+91,worm.y-20,worm.x+91,worm.y+20)
+line(worm.x+98,worm.y-20,worm.x+98,worm.y+20)
+line(worm.x+105,worm.y-20,worm.x+105,worm.y+20)
+line(worm.x+112,worm.y-20,worm.x+112,worm.y+20)
+line(worm.x+123,worm.y-20,worm.x+123,worm.y+20)
+line(worm.x+122,worm.y-20,worm.x+122,worm.y+20)
+line(worm.x+127,worm.y-20,worm.x+127,worm.y+20)
+line(worm.x+117,worm.y-20,worm.x+117,worm.y+20)
+
+worm.x = worm.x + worm.vx *.3
+worm.y = worm.x + worm.vy *.2}
+
 
 for ( let squid of squids ) {
-//big squid
+
 noStroke()
 fill(199, 114, 34)
-quad(748,574,769,545,812,565,789,600)
-ellipse(562,576,400,80)
+quad(squid.x+748,squid.y+374,squid.x+769,squid.y+345,squid.x+812,squid.y+365,squid.x+789,squid.y+400)
+ellipse(squid.x+562,squid.y+376,400,80)
 strokeWeight(6)
 stroke(199, 114, 34)
-line(379,576,23,616)
-line(389,562,21,567)
-line(402,560,32,526)
-line(402,584,87,646)
-line(388,575,63,687)
-quad(31,523,22,514,4,524,20,532)
-quad(22,565,11,556,3,563,17,572)
-quad(21,615,15,608,3,616,17,624)
-quad(85,645,74,644,66,649,82,654)
-quad(61,685,47,683,40,693,60,696)
+line(squid.x+379,squid.y+376,squid.x+23,squid.y+416)
+line(squid.x+389,squid.y+362,squid.x+21,squid.y+367)
+line(squid.x+402,squid.y+360,squid.x+32,squid.y+326)
+line(squid.x+402,squid.y+384,squid.x+87,squid.y+446)
+line(squid.x+388,squid.y+375,squid.x+63,squid.y+487)
+quad(squid.x+31,squid.y+323,squid.x+22,squid.y+314,squid.x+4,squid.y+324,squid.x+20,squid.y+332)
+quad(squid.x+22,squid.y+365,squid.x+11,squid.y+356,squid.x+3,squid.y+363,squid.x+17,squid.y+372)
+quad(squid.x+21,squid.y+415,squid.x+15,squid.y+408,squid.x+3,squid.y+416,squid.x+17,squid.y+424)
+quad(squid.x+85,squid.y+445,squid.x+74,squid.y+444,squid.x+66,squid.y+449,squid.x+82,squid.y+454)
+quad(squid.x+61,squid.y+485,squid.x+47,squid.y+483,squid.x+40,squid.y+493,squid.x+60,squid.y+496)
 fill(204, 124, 49)
-ellipse(518,575,10,90)
+ellipse(squid.x+518,squid.y+375,10,90)
 stroke(204, 124, 49)
 strokeWeight(5)
-line(733,573,798,568)
+line(squid.x+733,squid.y+373,squid.x+798,squid.y+368)
 stroke(0)
 fill(250)
-circle(445,565,40)
+circle(squid.x+445,squid.y+365,40)
 fill(0)
-circle(445,565,25)
+circle(squid.x+445,squid.y+365,25)
+
+squid.x = squid.x + squid.vx *.2
+squid.y = squid.y + squid.vy *.1
+
+}
 }
 
-for ( let shark of sharks) {
-//goblin shark
-noStroke()
-fill(79, 107, 125) //40, 86, 115
-ellipse(255,431,215,40)
-ellipse(259,436,150,30)
-quad(233,408,294,382,308,417,270,424)
-quad(233,408,71,410,160,421,315,435)
-quad(235,408,370,412,429,435,242,426)
-quad(119,414,119,424,152,436,430,458)
-quad(152,434,121,442,121,450,190,454)
-quad(186,451,456,457,453,438,367,412)
-quad(171,452,248,451,241,439,158,436)
-quad(444,437,512,374,521,375,474,457)
-quad(487,423,490,472,467,474,448,450)
-quad(390,447,394,467,419,470,420,447)
-quad(315,448,322,466,353,469,358,442) //middle fin
-quad(181,449,196,464,239,460,239,442)
-quad(365,413,380,395,400,408,400,427) // top
-triangle(196,462,219,470,238,458)
-fill(0)
-ellipse(138,415,6,4)
-stroke(0)
-strokeWeight(3)
-line(167,421,171,442)
-line(184,423,185,441)
-line(174,420,178,442)
-}
 
-for (let deepfish of deepfishs) {
-// transparent fish blob
-noStroke()
-fill(236, 221, 237,100)
-circle(504,681,55)
-quad(535,704,538,692,530,688,521,699)
-quad(479,667,482,671,481,675,476,676)
-quad(500,700,515,693,501,677,487,686)
-arc(552,704,35,35,PI - HALF_PI, PI + HALF_PI ,PIE);
-stroke(0,0,0,100)
-strokeWeight(1)
-arc(513,684,45,25,PI-QUARTER_PI,PI, PIE);
-fill(0)
-circle(498,669,10)
-}
+if(frameCount>=900 ){
+ // && frameCount<1200 ){
 
-for (let smalljelly of smalljellys) {
-//small jellyfish
-noStroke()
-fill(199, 187, 84)
-arc(527,188,30,30,PI- QUARTER_PI,0, CHORD)
-strokeWeight(1.5)
-stroke(199, 187, 84)
-line(515,191,524,211)
-line(541,198,537,187)
-line(542,202,534,186)
-line(534,198,527,190)
-line(533,210,522,188)
-line(538,185,543,198)
-line(532,186,536,200)
-line(518,189,523,201)
-line(532,202,525,187)
-}
+        let color_1 = color(156, 213, 219 )      // light blue
+        let color_2 = color(3,4,5)
 
-for ( let largejelly of largejellys) {
-// // large jellyfish
-noStroke()
-fill(161, 98, 156)
-arc(460,353,80,80, PI - QUARTER_PI,0, CHORD)
-strokeWeight(2.5)
-stroke(161, 98, 156)
-line(483,333,511,403)
-line(478,342,499,394)
-line(476,356,499,411)
-line(464,360,478,383)
-line(452,358,478,421)
-line(443,365,455,390)
-line(433,366,462,417)
-line(476,392,458,359)
-line(472,354,489,401)
-line(451,361,464,401)
-}
+        // let fade_amount = mouseY / height //use this to control animals by depth
+        // let lerped_color = lerpColor(color_1, color_2, fade_amount)
+        let fade_amount = frameCount /1200
+        let lerped_color = lerpColor(color_1, color_2, fade_amount)
 
-for (let angler of anglers) {
-//angler
-stroke(138, 54, 48)
-strokeWeight(2)
-line(289,727,278,710)
-line(278,710,251,715)
-line(251,715,242,740)
-fill(138, 54, 48)
-circle(244,769,65)
-ellipse(235,775,75,45)
-triangle(217,794,233,799,214,804)
-arc(185,776,35,35,PI + HALF_PI, PI - HALF_PI ,PIE);
-fill(250)
-noStroke()
-circle(289,727,6)
-circle(256,756,12)
-arc(244,771,45,25,PI-QUARTER_PI,PI, PIE);
-arc(277,775,25,35,PI-QUARTER_PI,0-HALF_PI, PIE);
-}
+        background(lerped_color)
 
+        for (let angler of anglers) {
+        stroke(138, 54, 48)
+        strokeWeight(2)
+        line(angler.x+39,angler.y+27,angler.x+28,angler.y+10)
+        line(angler.x+28,angler.y+10,angler.x+1,angler.y+15)
+        line(angler.x+1,angler.y+15,angler.x-8,angler.y+40)
+        fill(138, 54, 48)
+        circle(angler.x-6,angler.y+69,65)
+        ellipse(angler.x-15,angler.y+75,75,45)
+        triangle(angler.x-33,angler.y+94,angler.x-17,angler.y+99,angler.x-36,angler.y+104)
+        arc(angler.x-65,angler.y+76,35,35,PI + HALF_PI, PI - HALF_PI ,PIE);
+        fill(250)
+        noStroke()
+        circle(angler.x+39,angler.y+27,6)
+        circle(angler.x+6,angler.y+56,12) //eye
+        arc(angler.x-6,angler.y+71,45,25,PI-QUARTER_PI,PI, PIE);
+        arc(angler.x+25,angler.y+75,25,35,PI-QUARTER_PI,0-HALF_PI, PIE);
+
+        angler.x = angler.x + angler.vx *.2
+        angler.y = angler.y + angler.vy *.1
+        }
+
+
+        for (let deepfish of deepfishs) {
+        // transparent fish blob
+        noStroke()
+        fill(236, 221, 237,100)
+        circle(deepfish.x+4,deepfish.y+81,55)
+        quad(deepfish.x+35,deepfish.y+104,deepfish.x+38,deepfish.y+92,deepfish.x+30,deepfish.y+88,deepfish.x+21,deepfish.y+99)
+        quad(deepfish.x-21,deepfish.y+67,deepfish.x-18,deepfish.y+71,deepfish.x-19,deepfish.y+75,deepfish.x-24,deepfish.y+76)
+        quad(deepfish.x,deepfish.y+100,deepfish.x+15,deepfish.y+93,deepfish.x+1,deepfish.y+77,deepfish.x-13,deepfish.y+86)
+        arc(deepfish.x+52,deepfish.y+104,35,35,PI - HALF_PI, PI + HALF_PI ,PIE);
+        stroke(0,0,0,100)
+        strokeWeight(1)
+        arc(deepfish.x+13,deepfish.y+84,45,25,PI-QUARTER_PI,PI, PIE);
+        fill(0)
+        circle(deepfish.x-2,deepfish.y+69,10)
+
+        deepfish.x = deepfish.x + deepfish.vx *.3
+        deepfish.y = deepfish.y + deepfish.vy *.2
+        if (deepfish.x>= width) {
+          deepfish.vx=-deepfish.vx
+        }
+        if(deepfish.x<=0) {
+          deepfish.vx=-deepfish.vx
+        }
+        if(deepfish.y>=height) {
+          deepfish.vy=-deepfish.vy
+        }
+        if(deepfish.y<=0) {
+          deepfish.vy=-deepfish.vy}
+
+        }
 }
 
 function mouseClicked() {
 
-
-    print(int(mouseX), int(mouseY))
     fullscreen(true)
 }
-
-// if the window is resized, resize the canvas to match
 function windowResized() {
+
     resizeCanvas(windowWidth, windowHeight)
+}
 }
